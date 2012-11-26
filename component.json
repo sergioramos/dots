@@ -7,7 +7,7 @@
     "component/classes": "*",
     "component/domify": "*"
   },
-  "main": "dots.js",
-  "scripts": ["dots.js", "template.js"],
-  "styles": ["dots.css"]
+  "main": "src/dots.js",
+  "scripts": ["src/dots.js", "src/template.js"],
+  "styles": ["src/dots.css"]
 }
