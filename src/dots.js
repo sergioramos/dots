@@ -4,7 +4,7 @@ var html = require('./template'),
 
 module.exports = function (element, ms) {
   var pos = ['one', 'two', 'three'];
-  var dots = create(html);
+  var dots = create(html).pop();
   var cl = classes(dots);
   var interval = null;
   var returns = {};
@@ -18,7 +18,7 @@ module.exports = function (element, ms) {
   };
   
   returns.start = function () {
-    element.appendChild(dots.pop());
+    element.appendChild(dots);
     interval = setInterval(run, ms);
     return returns;
   };
