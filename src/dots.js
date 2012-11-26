@@ -18,7 +18,7 @@ module.exports = function (element, ms) {
   };
   
   returns.start = function () {
-    element.appendChild(dots);
+    element.appendChild(dots.pop());
     interval = setInterval(run, ms);
     return returns;
   };
