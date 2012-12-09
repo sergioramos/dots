@@ -1,13 +1,18 @@
 {
   "name": "dots",
   "repo": "ramitos/dots",
-  "description": "dots loading anim",
-  "version": "0.0.1",
+  "description": "loading animation with dots",
+  "version": "0.0.2",
   "dependencies": {
     "component/classes": "*",
     "component/domify": "*"
   },
   "main": "src/dots.js",
-  "scripts": ["src/dots.js", "src/template.js"],
-  "styles": ["src/dots.css"]
+  "scripts": [
+    "src/template.js",
+    "src/dots.js"
+  ],
+  "styles": [
+    "src/dots.css"
+  ]
 }

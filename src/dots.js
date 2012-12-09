@@ -1,13 +1,15 @@
 var html = require('./template'),
     classes = require('classes'),
     create = require('domify')
+    
+var pos = ['one', 'two', 'three'];
 
 module.exports = function (element, ms) {
-  var pos = ['one', 'two', 'three'];
   var dots = create(html).pop();
   var cl = classes(dots);
   var interval = null;
   var returns = {};
+  if(!ms) ms = 250;
   var i = 0;
   
   var run = function () {
@@ -18,6 +20,7 @@ module.exports = function (element, ms) {
   };
   
   returns.start = function () {
+    if(interval) return;
     element.appendChild(dots);
     interval = setInterval(run, ms);
     return returns;
@@ -25,11 +28,14 @@ module.exports = function (element, ms) {
   
   returns.stop = function () {
     clearInterval(interval);
+    interval = null;
     return returns;
   };
   
   returns.rm = function () {
     element.removeChild(dots);
+    clearInterval(interval);
+    interval = null;
   };
   
   return returns;
