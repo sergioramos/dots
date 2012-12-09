@@ -1,13 +1,18 @@
+
+
 .dots .dot {
   color: #ccc;
-  float: left;
+  float: left
 }
+
 .dots.one .dot:nth-child(1) {
-  color: #000;
+  color: #000
 }
+
 .dots.two .dot:nth-child(2) {
-  color: #000;
+  color: #000
 }
+
 .dots.three .dot:nth-child(3) {
-  color: #000;
+  color: #000
 }

@@ -1,1 +1,0 @@
-module.exports = "<div class='dots one'><div class='dot'>&#8226</div><div class='dot'>&#8226</div><div class='dot'>&#8226</div></div>"

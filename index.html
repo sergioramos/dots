@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='build/build.css' rel='stylesheet' type='text/css'>
+    <script src='build/build.js'></script>
+    <style>
+      body, html {
+        margin: 0px;
+      }
+
+      .header {
+        border-bottom: 1px solid #BBB;
+        background-color: whiteSmoke;
+        padding: 5px;
+        height: 21px;
+      }
+
+      #stop, #start, #rm {
+        float: right;
+      }
+      
+      #container {
+        margin-top: 10px;
+        height: 16px;
+      }
+      
+      #container .dots {
+        margin: 0px auto;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='header'>
+      <button id='start'>start</button>
+      <button id='stop'>stop</button>
+      <button id='rm'>remove</button>
+    </div>
+    <div id='container'></div>
+    <script>
+      var container = document.getElementById('container');
+      var start = document.getElementById('start');
+      var stop = document.getElementById('stop');
+      var rm = document.getElementById('rm');
+      
+      var dots = require('dots')(container, 250).start();
+            
+      start.addEventListener('click', function (e) {
+        e.preventDefault();
+        dots.start();
+      });
+
+      stop.addEventListener('click', function (e) {
+        e.preventDefault();
+        dots.stop();
+      });
+      
+      rm.addEventListener('click', function (e) {
+        e.preventDefault();
+        dots.rm();
+      });
+    </script>
+  </body>
+</html>
