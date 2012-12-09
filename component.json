@@ -1,13 +1,15 @@
 {
   "name": "dots",
+  "version": "0.0.2",
   "repo": "ramitos/dots",
   "description": "loading animation with dots",
-  "version": "0.0.2",
+  "twitter": "@ramitos",
+  "license": "MIT",
+  "main": "src/dots.js",
   "dependencies": {
     "component/classes": "*",
     "component/domify": "*"
   },
-  "main": "src/dots.js",
   "scripts": [
     "src/template.js",
     "src/dots.js"
